@@ -1,0 +1,10 @@
+<script src="{{ url(asset('js/jquery.js')) }}"></script>
+<script>
+        jQuery('img').replaceWith(function(){
+	        var thumb = this.src,
+	            fullImage = thumb.replace(/\/thumbs/, "");
+	        return '<a class="fancybox" href="' + fullImage + '" data-fancybox-group="gallery" title="">' +
+	                        '<img class="fancybox_img"  src="' + thumb + '" width="200">' +
+	                '</a>';
+	    });
+</script>

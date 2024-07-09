@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+
+@layer components {
+
+}
+
+@layer base {
+
+    body, html {
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #maincontent h1 {
+        @apply text-3xl
+    }
+
+    #maincontent h2 {
+        @apply text-2xl
+    }
+
+    #maincontent h3 {
+        @apply text-xl
+    }
+
+    #maincontent p a {
+        @apply text-indigo-500
+    }
+
+    #maincontent p a:hover {
+        @apply text-indigo-700
+    }
+
+    #maincontent p {
+        margin-bottom: 10px;
+    }
+
+    #maincontent table tr td {
+        border: 1px dotted #6B7280;
+        padding: 10px;
+    }
+
+    #toTop {
+        position: fixed;
+        display: inline-block;
+        bottom: 25px;
+        right: -40px;
+        width: 40px;
+        height: 40px;
+        z-index: 1000;
+        cursor: pointer;
+        text-align: center;
+        visibility: hidden;
+      transition: all .3s ease-in-out;
+    }
+    #toTop:hover {
+
+    }
+
+    #toTop svg {
+        position: relative;
+        top: 12px;
+        right: -1px;
+        fill: #6B7280;
+        transition: all .3s ease-in-out;
+    }
+
+    #toTop:hover svg {
+        cursor: pointer;
+        fill: #000000;
+        transition: all .3s ease-in-out;
+    }
+
+    #toTop.show {
+        opacity: 1;
+        visibility: visible;
+        right: calc(2%);
+    }
+
+
+}
