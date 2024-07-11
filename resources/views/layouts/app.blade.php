@@ -51,7 +51,7 @@
         <div class="w-full px-4 lg:px-0 lg:w-96 lg:mx-8">
             <x-sidebar/>
         </div>
-        <div id="maincontent" class="px-2 mt-4 lg:px-0 lg:flex-auto {{-- lg:max-w-7xl lg:mt-8 lg:mr-16 --}}">
+        <div id="maincontent" class="px-2 mt-4 lg:px-6 w-full">
             @yield('content')
         </div>
     </div>
