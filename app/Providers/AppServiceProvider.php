@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Content;
 use App\Models\Banner;
 use App\Models\Contact;
+use App\Models\ContrCatDoc;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -34,5 +35,8 @@ class AppServiceProvider extends ServiceProvider
 
         view()->share('contacts',
         Contact::find(1));
+
+        view()->share('contrcatdoc',
+        ContrCatDoc::orderBy('id', 'asc')->get());
     }
 }

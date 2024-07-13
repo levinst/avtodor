@@ -12,6 +12,8 @@ use App\Http\Livewire\Admin\Files;
 use App\Http\Livewire\Admin\InfoCarrier;
 use App\Http\Livewire\Admin\News;
 use App\Http\Livewire\Admin\PhotoReports;
+use App\Http\Livewire\Admin\ContrCatDoc;
+use App\Http\Livewire\Admin\ContrDoc;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Category;
 use App\Http\Livewire\ContentView;
@@ -81,6 +83,8 @@ Route::middleware('auth')->prefix('administrator')->group(function () {
     Route::get('categories', Categories::class)->name('categories');
     Route::get('contents', Contents::class)->name('contents');
     Route::get('banners', Banners::class)->name('banners');
+    Route::get('contr-cat-doc', ContrCatDoc::class)->name('contr-cat-doc');
+    Route::get('contr-doc', ContrDoc::class)->name('contr-doc');
 });
 
 Route::middleware('guest')->group(function () {

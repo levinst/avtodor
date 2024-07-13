@@ -122,6 +122,18 @@
                                 </a>
                             </li>
                             <li class="w-full h-full py-3 px-2 border-b border-light-border
+                                {{ Route::is('contr-cat-doc') ? 'bg-white' : '' }}">
+                                <a href="{{ route('contr-cat-doc') }}" class="block font-hairline hover:text-sky-800 font-normal text-sm text-nav-item no-underline w-full">
+                                    Категории документов весового контроля
+                                </a>
+                            </li>
+                            <li class="w-full h-full py-3 px-2 border-b border-light-border
+                                {{ Route::is('contr-doc') ? 'bg-white' : '' }}">
+                                <a href="{{ route('contr-doc') }}" class="block font-hairline hover:text-sky-800 font-normal text-sm text-nav-item no-underline w-full">
+                                    Документы весового контроля
+                                </a>
+                            </li>
+                            <li class="w-full h-full py-3 px-2 border-b border-light-border
                                 {{ Route::is('banners') ? 'bg-white' : '' }}">
                                 <a href="{{ route('banners') }}" class="block font-hairline hover:text-sky-800 font-normal text-sm text-nav-item no-underline w-full">
                                     Баннеры

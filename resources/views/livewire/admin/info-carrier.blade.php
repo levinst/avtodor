@@ -17,7 +17,7 @@
 
     <div x-cloak x-show="open" x-transition.duration.500ms class="absolute top-10 left-0 right-0 mx-auto z-10 bg-sky-100 p-6 w-full max-w-4xl shadow-xl">
         <div class="mb-8 text-xl text-gray-700 font-bold">
-            {{ $updateMode ? "Обновить новость" : "Добавить новость"}}
+            {{ $updateMode ? "Обновить" : "Добавить"}}
         </div>
         <form>
             <div class="flex w-full">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="w-64 ml-2">
-                    <label class="block mb-2 font-medium text-gray-900">Изображение новости</label>
+                    <label class="block mb-2 font-medium text-gray-900">Изображение</label>
                     <input wire:model.defer="image" id="upload{{ $iteration }}" type="file" accept=".jpg, .png, .jpeg" class="block w-full -mt-1.5 pt-0 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"/>
                 </div>
             </div>
@@ -49,7 +49,7 @@
             @endif
 
             <div>
-                <label class="block font-medium text-gray-900 mb-1 mt-8">Текст новости</label>
+                <label class="block font-medium text-gray-900 mb-1 mt-8">Текст</label>
                 @error('text') <span class="text-red-600 text-sm">{{ $message }}.</span>@enderror
                 <x-tinymce-lfm wire:model.defer="text" placeholder="Текст ..." />
             </div>

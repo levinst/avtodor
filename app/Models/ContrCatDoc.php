@@ -10,4 +10,9 @@ class ContrCatDoc extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function contents()
+    {
+      return $this->hasMany(ContrDoc::class);
+    }
 }
