@@ -14,6 +14,7 @@ use App\Http\Livewire\Admin\News;
 use App\Http\Livewire\Admin\PhotoReports;
 use App\Http\Livewire\Admin\ContrCatDoc;
 use App\Http\Livewire\Admin\ContrDoc;
+use App\Http\Livewire\ContrDocView as LivewireContrDocView;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Category;
 use App\Http\Livewire\ContentView;
@@ -32,6 +33,7 @@ use App\Http\Livewire\CarrierView;
 use App\Http\Livewire\Carrier as LivewireCarrier;
 use App\Http\Livewire\PhotoReports as LivewirePhotoReports;
 use App\Http\Livewire\PhotoReportsView;
+use App\Http\Livewire\ContrDoc as LivewireContrDoc;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,10 +63,10 @@ Route::get('/clear', function () {
 Route::get('/', Home::class)->name('home');
 Route::get('news', LivewireNews::class)->name('newsAll');
 Route::get('news/{slug}', NewsView::class)->name('newsView');
-
 Route::get('carrier', LivewireCarrier::class)->name('carrierAll');
 Route::get('carrier/{slug}', CarrierView::class)->name('carrierView');
-
+Route::get('contrdoc', LivewireContrDoc::class)->name('contrdocAll');
+Route::get('contrdoc/{slug}', LivewireContrDocView::class)->name('contrdocView');
 Route::get('content/{slug}', ContentView::class)->name('contentView');
 Route::get('photoreports', LivewirePhotoReports::class)->name('photoreportsAll');
 Route::get('photoreports/{slug}', PhotoReportsView::class)->name('photoreportsView');

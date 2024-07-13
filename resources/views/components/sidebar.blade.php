@@ -33,7 +33,7 @@
                     <a href="{{ route('carrierAll') }}" class="{{ Route::is('carrierAll') || Route::is('carrierAll') ? 'text-white bg-yellow-400' : 'bg-zinc-100' }}  block px-4 py-2 mt-2 text-sm font-semibold rounded-lg lg:-mt-1 hover:text-gray-900 hover:bg-gray-200 transition ease-in-out duration-300">
                         Информация для перевозчиков
                     </a>
-                    <a href="#" class="block px-4 py-2 mt-2 text-sm font-semibold rounded-lg lg:mt-1 hover:text-gray-900 hover:bg-gray-200 transition ease-in-out duration-300">
+                    <a href="{{ route('contrdocAll') }}" class="{{ Route::is('contrdocAll') || Route::is('contrdocAll') ? 'text-white bg-yellow-400' : 'bg-zinc-100' }}  block px-4 py-2 mt-2 text-sm font-semibold rounded-lg lg:mt-1 hover:text-gray-900 hover:bg-gray-200 transition ease-in-out duration-300">
                         Документы
                     </a>
                 </div>

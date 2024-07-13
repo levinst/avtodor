@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ContrDoc extends Model
 {
@@ -11,8 +12,8 @@ class ContrDoc extends Model
 
     protected $guarded = [];
 
-    public function category()
+    public function contrcatdoc(): BelongsTo
     {
-        return $this->belongsTo(ContrCatDoc::class);
+        return $this->belongsTo(ContrCatDoc::class, 'contr_cat_doc_id');
     }
 }
